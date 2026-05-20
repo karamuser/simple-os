@@ -1,89 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl">
 <head>
-    <title>SIMPLE OS - by Karam</title>
+    <meta charset="UTF-8">
+    <title>SIMPLE OS v0.2 - by Karam</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #0a0a0a;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
-            padding: 30px;
+            background: linear-gradient(135deg, #1a0b2e 0%, #0d1b3e 100%);
+            font-family: 'Segoe UI', 'Tahoma', 'Courier New', monospace;
+            padding: 40px 20px;
+            min-height: 100vh;
+            color: #e0c3ff;
         }
+
         .container {
-            max-width: 900px;
-            margin: auto;
-            background-color: #111;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #00ff00;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(15, 25, 45, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 32px;
+            padding: 30px;
+            border: 1px solid #9b59b6;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(155,89,182,0.3);
         }
-        h1, h2 {
+
+        h1 {
             text-align: center;
-            color: #00ff00;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #c084fc, #60a5fa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
         }
-        a {
-            color: #0a0a0a;
-            text-decoration: none;
-            background: #00ff00;
-            padding: 10px 20px;
+
+        h2 {
+            color: #c084fc;
+            border-right: 4px solid #9b59b6;
+            padding-right: 15px;
+            margin: 25px 0 15px 0;
+        }
+
+        .download-area {
+            background: rgba(155, 89, 182, 0.2);
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border: 1px dashed #c084fc;
+        }
+
+        .download-btn {
             display: inline-block;
-            margin: 10px 0;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #9b59b6, #3b82f6);
+            color: white;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 50px;
             font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59,130,246,0.3);
         }
-        a:hover {
-            background: #00aa00;
+
+        .download-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(155,89,182,0.5);
         }
-        .cmd {
-            background: #222;
-            padding: 10px;
-            border-left: 4px solid #00ff00;
-            font-family: monospace;
+
+        .cmd-box {
+            background: #0a0f1c;
+            border-right: 4px solid #9b59b6;
+            padding: 15px;
             margin: 15px 0;
+            border-radius: 16px;
+            font-family: monospace;
         }
-        .note {
-            background: #1a1a1a;
-            padding: 10px;
-            border: 1px solid #00ff00;
-            font-size: 0.9em;
+
+        .story-box {
+            background: linear-gradient(135deg, #1e1a3a, #0f172a);
+            padding: 20px;
+            border-radius: 24px;
+            margin: 20px 0;
+            border: 1px solid #3b82f6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #9b59b6;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin: 5px;
+        }
+
+        hr {
+            border-color: #9b59b6;
+            margin: 20px 0;
+        }
+
+        ul, .rtl-text {
+            text-align: right;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        code {
+            background: #00000055;
+            padding: 3px 8px;
+            border-radius: 12px;
+            color: #facc15;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 SIMPLE OS v0.1 new update !</h1>
-        <p>A simple command-line operating system written in Python by <strong>Karam from T STUDIO</strong>.</p>
 
-        <div class="cmd">
-            <strong>📥 Download SIMPLE OS:</strong><br>
-            <a href="https://raw.githubusercontent.com/karamuser/simple-os/main/simple_os.py" download>⬇️ simple_os.py</a>
-        </div>
+<div class="container">
+    <h1>SIMPLE OS v0.2</h1>
+    <p style="text-align:center">A simple command-line operating system written in Python by <strong>Karam Al-Bari</strong> from <strong>T STUDIO</strong>.</p>
 
-        <h2>📖 How to Run SIMPLE OS</h2>
-        <div class="cmd">
-            <strong>Step 1:</strong> Make sure you have Python installed on your computer.<br>
-            <strong>Step 2:</strong> Download the <code>simple_os.py</code> file from the link above.<br>
-            <strong>Step 3:</strong> Place the file anywhere on your computer (Desktop, Downloads, etc.).<br>
-            <strong>Step 4:</strong> Open your terminal (Command Prompt on Windows / Terminal on Linux/macOS).<br>
-            <strong>Step 5:</strong> Navigate to the folder where you saved the file using the <code>cd</code> command.<br>
-            <strong>Step 6:</strong> Run the following command:<br>
-            <code>python3 simple_os.py</code>
-        </div>
-
-        <div class="cmd">
-            <strong>🎮 Available commands inside SIMPLE OS:</strong><br>
-            <code>help</code> - Show available commands<br>
-            <code>info</code> - About SIMPLE OS<br>
-            <code>neofetch</code> - Show system info<br>
-            <code>exit</code> - Close SIMPLE OS
-        </div>
-
-        <div class="note">
-            ⚠️ <strong>Note:</strong> SIMPLE OS runs only in the terminal. Make sure Python 3 is installed correctly.
-        </div>
-
-        <hr>
-        <p style="text-align: center;">⭐ SIMPLE OS | Python Project | T STUDIO ⭐</p>
+    <div class="download-area">
+        <a class="download-btn" href="https://raw.githubusercontent.com/karamuser/simple-os/main/simple_os.py" download>Download simple_os.py</a>
+        <p style="margin-top:12px; font-size:0.85rem">Click to download the Python script.</p>
     </div>
+
+    <div class="story-box">
+        <h2>The OS.SYS Legacy</h2>
+        <p><strong>OS.SYS</strong> was a real operating system written in <strong>Zent Coding</strong>, a custom language created by Karam Al-Bari. It featured:</p>
+        <ul>
+            <li><strong>K{W.L.U}</strong> kernel (combining ideas from Windows, Linux, Unix).</li>
+            <li>Graphical user interface (GUI) with black and blue colors.</li>
+            <li>Advanced security and self‑defense mechanisms (Zero Error, H.BOCK).</li>
+            <li>Strict protection system (safe.os.syst).</li>
+        </ul>
+        <p>Due to its power, OS.SYS was voluntarily removed to maintain security. <strong>SIMPLE OS</strong> is a lightweight, open‑source version inspired by it, written entirely in Python.</p>
+        <div>
+            <span class="badge">Zent Coding</span>
+            <span class="badge">K{W.L.U}</span>
+            <span class="badge">Zero Error</span>
+            <span class="badge">H.BOCK</span>
+        </div>
+    </div>
+
+    <h2>How to Run</h2>
+    <div class="cmd-box">
+        1. Ensure <strong>Python 3</strong> is installed on your system.<br>
+        2. Download <strong>simple_os.py</strong> using the button above.<br>
+        3. Open a terminal in the download folder and run:<br>
+        <code>python3 simple_os.py</code>
+    </div>
+
+    <h2>Available Commands (v0.2)</h2>
+    <div class="cmd-box">
+        <code>help</code> — Show this help menu<br>
+        <code>info</code> — Display version and author info<br>
+        <code>neofetch</code> — Show logo and system information<br>
+        <code>calc</code> — Simple calculator mode<br>
+        <code>clear</code> — Clear the terminal screen<br>
+        <code>exit</code> — Exit SIMPLE OS
+    </div>
+
+    <hr>
+    <div style="text-align:center">
+        <span class="badge">v0.2</span>
+        <span class="badge">51+ users</span>
+        <span class="badge">Python 3</span>
+        <span class="badge">T STUDIO</span>
+        <span class="badge">OS.SYS Legacy</span>
+    </div>
+    <p style="text-align:center; margin-top:20px; font-size:0.8rem">Developed by <strong>Karam Al-Bari</strong> — inspired by <strong>OS.SYS</strong> and <strong>Zent Coding</strong>.</p>
+</div>
+
 </body>
 </html>
