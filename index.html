@@ -11,71 +11,79 @@
         }
 
         body {
-            background: linear-gradient(135deg, #1a0b2e 0%, #0d1b3e 100%);
+            background: #f4f4f4;
             font-family: 'Segoe UI', 'Tahoma', 'Courier New', monospace;
             padding: 40px 20px;
             min-height: 100vh;
-            color: #e0c3ff;
+            color: #1e1e1e;
         }
 
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            background: rgba(15, 25, 45, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 32px;
+            background: #ffffff;
+            border-radius: 24px;
             padding: 30px;
-            border: 1px solid #9b59b6;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(155,89,182,0.3);
+            border: 1px solid #cccccc;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .logo-area {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-area img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 20px;
+            border: 1px solid #e0e0e0;
+            padding: 8px;
+            background: white;
         }
 
         h1 {
             text-align: center;
             font-size: 2.5rem;
-            background: linear-gradient(135deg, #c084fc, #60a5fa);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: #111111;
             margin-bottom: 10px;
         }
 
         h2 {
-            color: #c084fc;
-            border-right: 4px solid #9b59b6;
+            color: #2c2c2c;
+            border-right: 4px solid #888888;
             padding-right: 15px;
             margin: 25px 0 15px 0;
         }
 
         .download-area {
-            background: rgba(155, 89, 182, 0.2);
-            border-radius: 24px;
+            background: #f0f0f0;
+            border-radius: 20px;
             padding: 20px;
             text-align: center;
             margin: 20px 0;
-            border: 1px dashed #c084fc;
+            border: 1px dashed #aaaaaa;
         }
 
         .download-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #9b59b6, #3b82f6);
+            background: #2c2c2c;
             color: white;
             padding: 14px 35px;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 40px;
             font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(59,130,246,0.3);
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
         }
 
         .download-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(155,89,182,0.5);
+            background: #111111;
         }
 
         .cmd-box {
-            background: #0a0f1c;
-            border-right: 4px solid #9b59b6;
+            background: #f9f9f9;
+            border-right: 4px solid #888888;
             padding: 15px;
             margin: 15px 0;
             border-radius: 16px;
@@ -83,25 +91,25 @@
         }
 
         .story-box {
-            background: linear-gradient(135deg, #1e1a3a, #0f172a);
+            background: #fafafa;
             padding: 20px;
-            border-radius: 24px;
+            border-radius: 20px;
             margin: 20px 0;
-            border: 1px solid #3b82f6;
+            border: 1px solid #dddddd;
         }
 
         .badge {
             display: inline-block;
-            background: #9b59b6;
-            color: white;
+            background: #e0e0e0;
+            color: #111111;
             padding: 5px 12px;
-            border-radius: 50px;
-            font-size: 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
             margin: 5px;
         }
 
         hr {
-            border-color: #9b59b6;
+            border-color: #dddddd;
             margin: 20px 0;
         }
 
@@ -114,16 +122,22 @@
         }
 
         code {
-            background: #00000055;
+            background: #eaeaea;
             padding: 3px 8px;
-            border-radius: 12px;
-            color: #facc15;
+            border-radius: 10px;
+            color: #d63384;
+            font-family: monospace;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <!-- الشعار -->
+    <div class="logo-area">
+        <img src="https://raw.githubusercontent.com/karamuser/simple-os/main/20260520133920_262.png" alt="SIMPLE OS Logo">
+    </div>
+
     <h1>SIMPLE OS v0.2</h1>
     <p style="text-align:center">A simple command-line operating system written in Python by <strong>Karam Al-Bari</strong> from <strong>T STUDIO</strong>.</p>
 
