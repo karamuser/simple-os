@@ -59,7 +59,7 @@ this OS like Dos and early linux the kernel is simple and easy \n you don't need
 while True:
     user_input = input("S_os$~/ ")
     if user_input == "help":
-        print("info \n exit \n neofetch_larp\n calc\n snake_game\n you can use IT in this OS ") 
+        print("info \n exit \n neofetch_larp\n calc\n you can use IT in this OS ") 
     elif user_input == "info":
         print(text)  
     elif user_input == "neofetch_larp":
