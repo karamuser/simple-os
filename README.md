@@ -1,4 +1,4 @@
-# 🚀 SIMPLE OS v0.2 NEW UPDATE! 
+# 🚀 SIMPLE OS v0.3 ! NEW UPDATE! 
 
 A minimal command-line operating system written in Python by **Karam from T STUDIO**.
 
