@@ -2,7 +2,8 @@
 <html dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>SIMPLE OS v0.2 - by Karam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLE OS v0.3 - by Karam</title>
     <style>
         * {
             margin: 0;
@@ -23,45 +24,59 @@
             margin: 0 auto;
             background: #ffffff;
             border-radius: 24px;
-            padding: 30px;
+            padding: 35px 30px;
             border: 1px solid #cccccc;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
         .logo-area {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .logo-area img {
-            max-width: 150px;
+            max-width: 140px;
             height: auto;
             border-radius: 20px;
             border: 1px solid #e0e0e0;
-            padding: 8px;
+            padding: 10px;
             background: white;
+            transition: 0.2s;
+        }
+
+        .logo-area img:hover {
+            border-color: #888888;
         }
 
         h1 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             color: #111111;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1rem;
+            color: #444444;
+            margin-bottom: 30px;
         }
 
         h2 {
             color: #2c2c2c;
             border-right: 4px solid #888888;
             padding-right: 15px;
-            margin: 25px 0 15px 0;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
         }
 
         .download-area {
             background: #f0f0f0;
             border-radius: 20px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
-            margin: 20px 0;
+            margin: 25px 0;
             border: 1px dashed #aaaaaa;
         }
 
@@ -69,94 +84,132 @@
             display: inline-block;
             background: #2c2c2c;
             color: white;
-            padding: 14px 35px;
+            padding: 14px 40px;
             text-decoration: none;
             border-radius: 40px;
             font-weight: bold;
             font-size: 1.1rem;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .download-btn:hover {
             background: #111111;
+            transform: scale(1.02);
         }
 
         .cmd-box {
             background: #f9f9f9;
             border-right: 4px solid #888888;
-            padding: 15px;
+            padding: 16px 20px;
             margin: 15px 0;
             border-radius: 16px;
             font-family: monospace;
+            line-height: 1.8;
         }
 
         .story-box {
             background: #fafafa;
-            padding: 20px;
+            padding: 22px 25px;
             border-radius: 20px;
-            margin: 20px 0;
+            margin: 25px 0;
             border: 1px solid #dddddd;
         }
 
         .badge {
             display: inline-block;
-            background: #e0e0e0;
+            background: #e8e8e8;
             color: #111111;
-            padding: 5px 12px;
+            padding: 5px 14px;
             border-radius: 30px;
             font-size: 0.75rem;
-            margin: 5px;
+            margin: 4px 3px;
+            font-weight: 500;
         }
 
         hr {
-            border-color: #dddddd;
-            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #dddddd;
+            margin: 30px 0 20px;
         }
 
-        ul, .rtl-text {
-            text-align: right;
+        ul {
+            list-style: none;
+            padding-right: 10px;
         }
 
-        li {
+        ul li {
             margin: 8px 0;
+            position: relative;
+            padding-right: 18px;
+        }
+
+        ul li::before {
+            content: "▸";
+            position: absolute;
+            right: 0;
+            color: #666666;
         }
 
         code {
             background: #eaeaea;
-            padding: 3px 8px;
-            border-radius: 10px;
-            color: #d63384;
+            padding: 3px 10px;
+            border-radius: 8px;
+            color: #a0335e;
             font-family: monospace;
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.8rem;
+            color: #666666;
+        }
+
+        .footer strong {
+            color: #111111;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px 10px; }
+            .container { padding: 20px 15px; }
+            h1 { font-size: 2rem; }
+            .download-btn { padding: 12px 25px; font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- الشعار -->
+
+    <!-- شعار النظام -->
     <div class="logo-area">
         <img src="https://raw.githubusercontent.com/karamuser/simple-os/main/20260520133920_262.png" alt="SIMPLE OS Logo">
     </div>
 
     <h1>SIMPLE OS v0.2</h1>
-    <p style="text-align:center">A simple command-line operating system written in Python by <strong>Karam Al-Bari</strong> from <strong>T STUDIO</strong>.</p>
+    <p class="subtitle">A minimal command‑line operating system written in Python by <strong>Karam Al‑Bari</strong> from <strong>T STUDIO</strong>.</p>
 
+    <!-- تحميل -->
     <div class="download-area">
-        <a class="download-btn" href="https://raw.githubusercontent.com/karamuser/simple-os/main/simple_os.py" download>Download simple_os.py</a>
-        <p style="margin-top:12px; font-size:0.85rem">Click to download the Python script.</p>
+        <a class="download-btn" href="https://raw.githubusercontent.com/karamuser/simple-os/main/simple_os.py" download>⬇ Download simple_os.py</a>
+        <p style="margin-top:14px; font-size:0.9rem; color:#444;">Click to download the Python script.</p>
     </div>
 
+    <!-- قصة OS.SYS -->
     <div class="story-box">
         <h2>The OS.SYS Legacy</h2>
-        <p><strong>OS.SYS</strong> was a real operating system written in <strong>Zent Coding</strong>, a custom language created by Karam Al-Bari. It featured:</p>
+        <p><strong>OS.SYS</strong> was a real operating system written in <strong>Zent Coding</strong>, a custom language created by Karam Al‑Bari. It featured:</p>
         <ul>
             <li><strong>K{W.L.U}</strong> kernel (combining ideas from Windows, Linux, Unix).</li>
             <li>Graphical user interface (GUI) with black and blue colors.</li>
             <li>Advanced security and self‑defense mechanisms (Zero Error, H.BOCK).</li>
             <li>Strict protection system (safe.os.syst).</li>
         </ul>
-        <p>Due to its power, OS.SYS was voluntarily removed to maintain security. <strong>SIMPLE OS</strong> is a lightweight, open‑source version inspired by it, written entirely in Python.</p>
-        <div>
+        <p style="margin-top:12px;">Due to its power, OS.SYS was voluntarily removed to maintain security. <strong>SIMPLE OS</strong> is a lightweight, open‑source version inspired by it, written entirely in Python.</p>
+        <div style="margin-top:14px;">
             <span class="badge">Zent Coding</span>
             <span class="badge">K{W.L.U}</span>
             <span class="badge">Zero Error</span>
@@ -164,6 +217,7 @@
         </div>
     </div>
 
+    <!-- التشغيل -->
     <h2>How to Run</h2>
     <div class="cmd-box">
         1. Ensure <strong>Python 3</strong> is installed on your system.<br>
@@ -172,6 +226,7 @@
         <code>python3 simple_os.py</code>
     </div>
 
+    <!-- الأوامر -->
     <h2>Available Commands (v0.2)</h2>
     <div class="cmd-box">
         <code>help</code> — Show this help menu<br>
@@ -183,15 +238,21 @@
     </div>
 
     <hr>
-    <div style="text-align:center">
+
+    <!-- تذييل -->
+    <div style="text-align:center;">
         <span class="badge">v0.2</span>
         <span class="badge">51+ users</span>
         <span class="badge">Python 3</span>
         <span class="badge">T STUDIO</span>
         <span class="badge">OS.SYS Legacy</span>
     </div>
-    <p style="text-align:center; margin-top:20px; font-size:0.8rem">Developed by <strong>Karam Al-Bari</strong> — inspired by <strong>OS.SYS</strong> and <strong>Zent Coding</strong>.</p>
+
+    <div class="footer">
+        Developed by <strong>Karam Al‑Bari</strong> — inspired by <strong>OS.SYS</strong> and <strong>Zent Coding</strong>.
+    </div>
+
 </div>
 
 </body>
-</html>
+    </html>
